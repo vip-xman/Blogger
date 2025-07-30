@@ -1,70 +1,129 @@
-# Getting Started with Create React App
+# My Blogger
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+一个基于 React 19 构建的现代化个人博客应用，专注于简约设计和优雅的用户体验。
 
-## Available Scripts
+## 项目概述
 
-In the project directory, you can run:
+这是一个采用极简主义设计理念的个人博客首页，致力于提供简洁、高雅、具有设计感的阅读体验。项目采用现代化的前端技术栈，注重性能优化和响应式设计。
 
-### `npm start`
+### 特色功能
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎨 **简约设计**: 极简主义风格，突出内容本质
+- 📱 **响应式布局**: 完美适配桌面端和移动端
+- ⚡ **高性能**: 基于 React 19 的高效渲染
+- 🔧 **模块化架构**: 组件化开发，便于维护和扩展
+- 🎯 **用户体验**: 注重交互细节和视觉层次
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 技术栈
 
-### `npm test`
+- **框架**: React 19.1.1
+- **构建工具**: Create React App 5.0.1
+- **样式方案**: CSS Modules
+- **测试框架**: Jest + Testing Library
+- **开发工具**: ESLint + React App 配置
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 项目结构
 
-### `npm run build`
+```
+my-blogger/
+├── public/                 # 静态资源
+│   ├── index.html         # HTML 模板
+│   └── favicon.ico        # 网站图标
+├── src/                   # 源代码
+│   ├── components/        # React 组件
+│   │   └── HomePage/      # 首页组件
+│   │       ├── HomePage.js
+│   │       ├── HomePage.module.css
+│   │       └── index.js
+│   ├── App.js            # 主应用组件
+│   ├── App.css           # 应用样式
+│   └── index.js          # 入口文件
+├── package.json          # 项目配置
+└── README.md            # 项目说明
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 开发指南
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 环境要求
 
-### `npm run eject`
+- Node.js >= 16.0.0
+- npm >= 8.0.0
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 快速开始
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **克隆项目**
+   ```bash
+   git clone <repository-url>
+   cd my-blogger
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. **安装依赖**
+   ```bash
+   npm install
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. **启动开发服务器**
+   ```bash
+   npm start
+   ```
+   
+   访问 [http://localhost:3000](http://localhost:3000) 查看应用
 
-## Learn More
+4. **构建生产版本**
+   ```bash
+   npm run build
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 可用脚本
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `npm start` - 启动开发服务器
+- `npm test` - 运行测试套件
+- `npm run build` - 构建生产版本
+- `npm run eject` - 弹出 CRA 配置（不可逆操作）
 
-### Code Splitting
+## 设计理念
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 核心原则
 
-### Analyzing the Bundle Size
+1. **极简主义** - 去除冗余，突出核心内容
+2. **留白美学** - 充分利用空白空间，营造呼吸感
+3. **视觉层次** - 清晰的信息层级，引导用户视线
+4. **响应式设计** - 移动端优先，流畅的多设备体验
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 技术特点
 
-### Making a Progressive Web App
+- **组件化架构** - 高度可复用的 React 组件
+- **CSS 模块化** - 样式隔离，避免命名冲突
+- **性能优化** - 代码分割和懒加载
+- **现代化开发** - ES6+ 语法，Hooks API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 部署
 
-### Advanced Configuration
+项目可以部署到任何支持静态文件托管的平台：
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Vercel**: 推荐，零配置部署
+- **Netlify**: 支持持续集成
+- **GitHub Pages**: 免费静态托管
+- **传统服务器**: 上传 build 文件夹内容
 
-### Deployment
+详细部署指南请参考 [Create React App 部署文档](https://facebook.github.io/create-react-app/docs/deployment)。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 贡献
 
-### `npm run build` fails to minify
+欢迎提交 Issue 和 Pull Request 来改进这个项目。
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 许可证
+
+本项目采用 MIT 许可证。
+
+## 联系方式
+
+如有问题或建议，请通过以下方式联系：
+
+- 创建 [Issue](https://github.com/your-username/my-blogger/issues)
+- 发送邮件至：your-email@example.com
+
+---
+
+*最后更新: 2025-07-30*
