@@ -80,8 +80,7 @@
   publishDate: "2025-01-15",
   readTime: "5 min read",
   tags: ["React", "JavaScript", "Web Development"],
-  coverImage: "图片URL (可选)",
-  featured: boolean // 是否为精选文章
+  coverImage: "图片URL (可选)"
 }
 ```
 
