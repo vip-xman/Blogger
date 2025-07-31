@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import HeroSection from './HeroSection';
+import ArticleListSection from './ArticleListSection';
+import ScrollIndicator from '../common/ScrollIndicator';
 import styles from './HomePage.module.css';
 
 const HomePage = () => {
+  const articleListRef = useRef(null);
+
+  const scrollToArticles = () => {
+    articleListRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to my Blog</h1>
-        <p className={styles.subtitle}>
-          Thoughts, stories & inspiration
-        </p>
-      </main>
+    <div className={styles.homePage}>
+      <HeroSection onScrollDown={scrollToArticles} />
+      <ArticleListSection ref={articleListRef} />
+      <ScrollIndicator />
     </div>
   );
 };

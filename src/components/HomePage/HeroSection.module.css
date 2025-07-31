@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+.heroSection {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.main {
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  border-radius: 40px;
+  padding: 6rem 5rem;
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.3),
+    0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
+}
+
+.main:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 40px 80px rgba(0, 0, 0, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff, #f0fff4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.subtitle {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 3rem 0;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.scrollButton {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #2f855a, #38a169);
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.025em;
+  box-shadow: 0 8px 24px rgba(47, 133, 90, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+}
+
+.scrollButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(47, 133, 90, 0.4);
+  background: linear-gradient(135deg, #276749, #2f855a);
+}
+
+.scrollButton:active {
+  transform: translateY(0);
+}
+
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.scrollButton:hover .arrowIcon {
+  transform: translateY(2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .heroSection {
+    background-attachment: scroll; /* 移动端使用scroll而不是fixed以提高性能 */
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .main {
+    max-width: 600px;
+    padding: 4.5rem 3rem;
+    border-radius: 32px;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    width: 100vw;
+    background-attachment: scroll;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .main {
+    max-width: 450px;
+    padding: 3.5rem 2.5rem;
+    border-radius: 24px;
+  }
+  
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .scrollButton {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
